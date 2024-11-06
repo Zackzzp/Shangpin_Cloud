@@ -1,0 +1,24 @@
+server:
+  port: 80
+spring:
+  main:
+    web-application-type: reactive
+  application:
+    name: spzx-cloud-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.121.222.152:8848
+        cluster-name: SZ
+    gateway:
+      routes:
+        - id: zack-cloud-user				# 路由id，可以自定义，只要唯一即可
+          uri: lb://zack-cloud-user		    # 路由的目标地址 lb就是负载均衡，后面跟服务名称
+          predicates:
+            - Path=/api/user/**			    # 这个是按照路径匹配，只要以/user/开头就符合要求
+
+      default-filters:
+        - AddRequestHeader=Truth, zack
+    loadbalancer:
+      nacos:
+        enabled: true

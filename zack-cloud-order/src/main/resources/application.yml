@@ -10,9 +10,21 @@ spring:
     username: root
     password: root
   cloud:
+    openfeign:
+      client:
+        config:
+          default:
+           loggerLevel: full
+           read-timeout: 2000
+           connect-timeout: 2000
+           retryer: com.zack.cloud.feign.retryer.FeignClientRetryer
+    loadbalancer:
+      nacos:
+        enabled: true
     nacos:
       discovery:
         server-addr: 47.121.222.152:8848
+        cluster-name: SH
   application:
     name: zack-cloud-order
 

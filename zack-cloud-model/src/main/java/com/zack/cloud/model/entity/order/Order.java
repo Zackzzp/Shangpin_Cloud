@@ -1,5 +1,7 @@
-package com.zack.cloud.order.entity;
+package com.zack.cloud.model.entity.order;
 
+
+import com.zack.cloud.model.entity.user.User;
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -12,5 +14,6 @@ public class Order {
     private String name ;
     private BigDecimal price ;
     private Integer num ;
+    private User user;
 
 }

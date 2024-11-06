@@ -1,4 +1,4 @@
-package com.zack.cloud.user.entity;
+package com.zack.cloud.model.entity.user;
 
 import lombok.Data;
 

@@ -1,6 +1,7 @@
 package com.zack.cloud.order.controller;
 
-import com.zack.cloud.order.entity.Order;
+
+import com.zack.cloud.model.entity.order.Order;
 import com.zack.cloud.order.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
