@@ -10,7 +10,8 @@ spring:
   cloud:
     sentinel:
       transport:
-        dashboard: 47.121.222.152:8090
+        dashboard: localhost:8080
+    
     nacos:
       config:
         server-addr: 47.121.222.152:8848
